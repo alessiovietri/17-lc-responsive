@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+
+    STO RAGIONANDO MOBILE-FIRST, QUINDI
+
+    CASO BASE: MOBILE
+
+*/
+/* .box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    transition: all 3s ease-in-out;
+}
+.box-2 {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+} */
+
+
+/* 
+
+    SECONDO NELL'ORDINE:
+
+    TABLET
+
+*/
+/* @media screen and (min-width: 500px) {
+
+    .box {
+        background-color: aquamarine;
+        border: 5px solid red;
+    }
+
+    .box-2 {
+        background-color: green;
+    }
+
+} */
+
+
+/* 
+
+    TERZO NELL'ORDINE:
+
+    DESKTOP
+
+*/
+/* @media screen and (min-width: 1000px) {
+
+    .box {
+        width: 400px;
+        height: 400px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .box-2 {
+        width: 500px;
+        height: 500px;
+    }
+
+} */
+
+
+/* 
+
+    ORDINE PER DESKTOP-FIRST:
+    1) Caso base -> DESKTOP
+    2) TABLET -> IN MEDIA QUERY
+    3) MOBILE -> IN MEDIA QUERY
+
+    ---------------------------------
+
+    ORDINE PER MOBILE-FIRST:
+    1) Caso base -> MOBILE
+    2) TABLET -> IN MEDIA QUERY
+    3) DESKTOP -> IN MEDIA QUERY
+
+*/
+
+/* 
+
+    STO RAGIONANDO DESKTOP-FIRST, QUINDI
+
+    CASO BASE: DESKTOP
+
+*/
+
+/* .box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+} */
+
+
+/* 
+
+    SECONDO NELL'ORDINE:
+
+    TABLET
+
+*/
+/* @media screen and (max-width: 1000px) {
+    
+    .box {
+        background-color: aquamarine;
+        border: 5px solid blue;
+    }
+
+} */
+
+
+/* 
+
+    TERZO NELL'ORDINE:
+
+    MOBILE
+
+*/
+/* @media screen and (max-width: 500px) {
+    
+    .box {
+        background-color: purple;
+        border: 5px solid red;
+    }
+
+} */
+
+/* --------------------------------------------------------------------- */
+
+/* 
+
+    ---------------------------------------------------
+                        INIZIO LC
+    ---------------------------------------------------
+
+*/
+section {
+    min-height: 100vh;
+    border: 3px dashed red;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+}
+
+/* LC 1 */
+#lc-1 .box {
+    background-color: blue;
+}
+
+
+/* LC 2 */
+#lc-2 img {
+    width: 30%;
+    border: 1px solid red;
+}
+
+
+/* LC 3 */
+#lc-3 .box {
+    background-color: blue;
+}
+
+
+/* LC 4 */
+#lc-4 ul {
+    padding-left: 20px;
+}
+
+
+
+/* PER I LC IN MOBILE-FIRST: */
+
+/* MOBILE PICCOLO */
+@media screen and (min-width: 576px) {
+
+    #lc-1 .box {
+        display: inline-block;
+        background-color: red;
+    }
+    
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    
+    #lc-4 ul {
+        padding-left: 0;
+    }
+
+    #lc-4 ul li {
+        display: inline-block;
+        list-style-type: none;
+        background-color: grey;
+        color: white;
+        width: calc(25% - 4px);
+        text-align: center;
+    }
+    
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+    
+}
+
+/* FINE PER I LC IN MOBILE-FIRST */
+
+/* --------------------------------------------------------------------- */
+
+/* PER I LC IN DESKTOP-FIRST: */
+
+/* TABLET */
+@media screen and (max-width: 992px) {
+
+    #lc-2 {
+        text-align: center;
+    }
+    
+    #lc-2 img {
+        width: 49%;
+    }
+
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    
+    #lc-2 img {
+        width: 100%;
+    }
+    
+}
+
+/* MOBILE PICCOLO */
+@media screen and (max-width: 576px) {
+
+    #lc-3 .box {
+        border-radius: 50%;
+    }
+    
+}
+
+/* FINE PER I LC IN DESKTOP-FIRST */
